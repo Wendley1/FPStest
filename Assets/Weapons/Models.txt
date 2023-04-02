@@ -1,0 +1,7 @@
+Models:
+
+Awm: https://sketchfab.com/3d-models/sniper-cdefd833b4b5407ba32c53c9e7f50cae
+M4a1: https://sketchfab.com/3d-models/modern-warefare-m4a1-167dd49ffff14d41ab11b6417f128bf1
+M1911: https://sketchfab.com/3d-models/m1911-59773eeb714c4018a56be37a80f2176d#download
+Desert Eagle: https://sketchfab.com/3d-models/desert-eagle-cabde59f5cf24effaf80536e35d04e95
+MP5: https://sketchfab.com/3d-models/mp5-free-c5e43bab0ee2472294e9151f8ff43d54

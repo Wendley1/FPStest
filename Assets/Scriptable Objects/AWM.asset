@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8c4897fca541f47b7b15afd5c12751, type: 3}
+  m_Name: AWM
+  m_EditorClassIdentifier: 
+  name: 
+  ammo: 0
+  maxDistance: 0
+  damage: 0
+  fireRate: 0
+  backForce: 0.1
+  smoothSpeed: 1
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  recoilX: 0
+  recoilY: 0
+  recoilZ: 0
+  aimRecoilX: 0
+  aimRecoilY: 0
+  aimRecoilZ: 0
+  snappines: 0

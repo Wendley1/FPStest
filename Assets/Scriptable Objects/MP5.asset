@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8c4897fca541f47b7b15afd5c12751, type: 3}
+  m_Name: MP5
+  m_EditorClassIdentifier: 
+  name: 
+  ammo: 30
+  maxDistance: 10
+  damage: 0
+  aimSway: 0
+  normalSway: 0
+  fireRate: 12
+  backForce: 0.05
+  smoothSpeed: 1
+  rotationX: -1.5
+  rotationY: 0.5
+  rotationZ: 5
+  aimVelocity: 15
+  aimPosition: {x: 0.01, y: -0.056, z: 0.34}
+  recoilX: -2.5
+  recoilY: 2.5
+  recoilZ: 0
+  aimRecoilX: -1.5
+  aimRecoilY: 1.5
+  aimRecoilZ: 0
+  snappines: 6
+  restPosition: {x: 0, y: 0, z: 0}
+  transitionSpeed: 6
+  n_bobSpeed: 8
+  s_bobSpeed: 11
+  n_bobAmount: 0.02
+  s_bobAmount: 0.08
+  sprintDamp: 7
+  normalRot: {x: 0, y: 0, z: 0}
+  sprintPos: {x: -0.15, y: -0.1, z: 0}
+  sprintRot: {x: 13.3, y: -36.94, z: 23}
+  r_amount: 25
+  r_maxAmount: 45
+  r_smooth: 60
