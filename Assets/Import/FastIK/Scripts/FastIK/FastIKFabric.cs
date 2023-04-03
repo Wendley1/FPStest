@@ -81,7 +81,6 @@ namespace DitzelGames.FastIK
             }
             StartRotationTarget = GetRotationRootSpace(Target);
 
-
             //init data
             var current = transform;
             CompleteLength = 0;
@@ -105,9 +104,6 @@ namespace DitzelGames.FastIK
 
                 current = current.parent;
             }
-
-
-
         }
 
         // Update is called once per frame

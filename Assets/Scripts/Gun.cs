@@ -43,13 +43,13 @@ public class Gun : MonoBehaviour
         Aim();
         WeaponSway();
         Shoot();
-
-        if (weaponSprint)
-            SprintAndRotate();
     }
 
     private void FixedUpdate()
     {
+        if(weaponSprint)
+            SprintAndRotate();
+
         if (weaponBob)
             WeaponBob();
     }
@@ -93,7 +93,7 @@ public class Gun : MonoBehaviour
 
             timer += bobSpeed * Time.deltaTime;
 
-            Vector3 newPosition = new(Mathf.Cos(timer) * bobAmount, normalPos.y + Mathf.Abs((Mathf.Sin(timer) * bobAmount)), normalPos.z);
+            Vector3 newPosition = new(Mathf.Cos(timer) * bobAmount, normalPos.y + Mathf.Abs(Mathf.Sin(timer) * bobAmount) + data.yWalkOffSet, normalPos.z);
             gun.localPosition = Vector3.Lerp(gun.localPosition, newPosition, Time.deltaTime * data.transitionSpeed);
         }
         else if (player.Sprinting) 
@@ -103,7 +103,7 @@ public class Gun : MonoBehaviour
 
             timer += bobSpeed * Time.deltaTime;
 
-            Vector3 newPosition = new(normalPos.x + Mathf.Cos(timer) * bobAmount, normalPos.y + Mathf.Abs((Mathf.Sin(timer) * bobAmount)), normalPos.z);
+            Vector3 newPosition = new(normalPos.x + Mathf.Cos(timer) * bobAmount, normalPos.y + Mathf.Abs(Mathf.Sin(timer) * bobAmount), normalPos.z);
             gun.localPosition = Vector3.Lerp(gun.localPosition, newPosition, Time.deltaTime * data.transitionSpeed);
         }
         else
@@ -154,10 +154,9 @@ public class Gun : MonoBehaviour
     private void Inputs()
     {
         aim = Input.GetMouseButton(1);
+
         if (Input.GetKeyDown(KeyCode.R))
-        {
             data.Reload();
-        }
     }
 
     private void Aim()
@@ -171,5 +170,4 @@ public class Gun : MonoBehaviour
 
         arms.localPosition = desiredPosition;
     }
-
 }

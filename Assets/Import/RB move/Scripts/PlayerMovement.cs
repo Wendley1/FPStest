@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float playerHeight = 2f;
+    private readonly float playerHeight = 2f;
 
     [SerializeField] Transform orientation;
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 6f;
     [SerializeField] float airMultiplier = 0.4f;
-    float movementMultiplier = 10f;
+    private readonly float movementMultiplier = 10f;
+
+    public bool Moving { get; private set; }
 
     [Header("Sprinting")]
     [SerializeField] float walkSpeed = 4f;
     [SerializeField] float sprintSpeed = 6f;
     [SerializeField] float acceleration = 10f;
+
+    public bool Sprinting { get; private set; }
 
     [Header("Jumping")]
     public float jumpForce = 5f;
@@ -36,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
     [SerializeField] float groundDistance = 0.2f;
-    public bool isGrounded { get; private set; }
+
+    public bool IsGrounded { get; private set; }
 
     Vector3 moveDirection;
     Vector3 slopeMoveDirection;
@@ -44,9 +49,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     RaycastHit slopeHit;
-
-    public bool Moving { get; private set; }
-    public bool Sprinting { get; private set; }
 
     private bool OnSlope()
     {
@@ -72,13 +74,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        IsGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         MyInput();
         ControlDrag();
         ControlSpeed();
 
-        if (Input.GetKeyDown(jumpKey) && isGrounded)
+        if (Input.GetKeyDown(jumpKey) && IsGrounded)
         {
             Jump();
         }
@@ -93,12 +95,12 @@ public class PlayerMovement : MonoBehaviour
 
         moveDirection = orientation.forward * verticalMovement + orientation.right * horizontalMovement;
 
-        Moving = rb.velocity.magnitude > 0.15f;
+        Moving = horizontalMovement != 0 || verticalMovement != 0;
     }
 
     void Jump()
     {
-        if (isGrounded)
+        if (IsGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
@@ -109,14 +111,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Sprinting = Input.GetKey(sprintKey) && Input.GetKey(KeyCode.W);
 
-        moveSpeed = Sprinting && isGrounded ?
+        moveSpeed = Sprinting && IsGrounded ?
             Mathf.Lerp(moveSpeed, sprintSpeed, acceleration * Time.deltaTime) :
             Mathf.Lerp(moveSpeed, walkSpeed, acceleration * Time.deltaTime);
     }
 
     void ControlDrag()
     {
-        rb.drag = isGrounded ?
+        rb.drag = IsGrounded ?
             groundDrag :
             airDrag;
     }
@@ -128,15 +130,15 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        if (isGrounded && !OnSlope())
+        if (IsGrounded && !OnSlope())
         {
             rb.AddForce(movementMultiplier * moveSpeed * moveDirection.normalized, ForceMode.Acceleration);
         }
-        else if (isGrounded && OnSlope())
+        else if (IsGrounded && OnSlope())
         {
             rb.AddForce(movementMultiplier * moveSpeed * slopeMoveDirection.normalized, ForceMode.Acceleration);
         }
-        else if (!isGrounded)
+        else if (!IsGrounded)
         {
             rb.AddForce(airMultiplier * movementMultiplier * moveSpeed * moveDirection.normalized, ForceMode.Acceleration);
         }

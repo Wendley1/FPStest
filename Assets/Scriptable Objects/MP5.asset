@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8c4897fca541f47b7b15afd5c12751, type: 3}
   m_Name: MP5
   m_EditorClassIdentifier: 
-  name: 
+  name: MP5
   ammo: 30
   maxDistance: 10
   damage: 0
-  aimSway: 0
-  normalSway: 0
+  aimSway: 7
+  normalSway: 12
   fireRate: 12
   backForce: 0.05
   smoothSpeed: 1
@@ -26,13 +26,14 @@ MonoBehaviour:
   rotationZ: 5
   aimVelocity: 15
   aimPosition: {x: 0.01, y: -0.056, z: 0.34}
-  recoilX: -2.5
+  recoilX: -3
   recoilY: 2.5
   recoilZ: 0
-  aimRecoilX: -1.5
-  aimRecoilY: 1.5
+  aimRecoilX: -1.8
+  aimRecoilY: 2
   aimRecoilZ: 0
   snappines: 6
+  yWalkOffSet: -0.0105
   restPosition: {x: 0, y: 0, z: 0}
   transitionSpeed: 6
   n_bobSpeed: 8
@@ -43,6 +44,6 @@ MonoBehaviour:
   normalRot: {x: 0, y: 0, z: 0}
   sprintPos: {x: -0.15, y: -0.1, z: 0}
   sprintRot: {x: 13.3, y: -36.94, z: 23}
-  r_amount: 25
+  r_amount: 35
   r_maxAmount: 45
   r_smooth: 60

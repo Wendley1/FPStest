@@ -34,11 +34,4 @@ public class CameraRecoil : MonoBehaviour
             new Vector3(aimRecoilX, Random.Range(-aimRecoilY, aimRecoilY), Random.Range(-aimRecoilZ, aimRecoilZ)) :
             new Vector3(recoilX, Random.Range(-recoilY, recoilY), Random.Range(-recoilZ, recoilZ));
     }
-
-    public void RecoilFire(float recoilX, float recoilY, float recoilZ, float snappines)
-    {
-        this.snappines = snappines;
-
-        targetRotation += new Vector3(recoilX, Random.Range(-recoilY, recoilY), Random.Range(-recoilZ, recoilZ));
-    }
 }

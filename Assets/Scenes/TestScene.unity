@@ -521,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314560897}
   m_LocalRotation: {x: 0.4296297, y: -0.38589138, z: -0.7521167, w: 0.31753224}
-  m_LocalPosition: {x: 42.5, y: 26.7, z: -12.9}
+  m_LocalPosition: {x: 46.1, y: 12.3, z: -17.6}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -901,7 +901,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481509983}
-  m_LocalRotation: {x: -0.5499861, y: -0.19137275, z: 0.123108596, w: 0.80357707}
+  m_LocalRotation: {x: -0.50464135, y: -0.27401257, z: 0.27053487, w: 0.77269995}
   m_LocalPosition: {x: -0.26975158, y: -0.000000112511, z: -0.00000015883832}
   m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.9999998}
   m_ConstrainProportionsScale: 0
@@ -2334,6 +2334,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6884815727347347827, guid: 6d44052548134dd419d19eb84c926cea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d44052548134dd419d19eb84c926cea, type: 3}
       propertyPath: m_Name
       value: sniper
@@ -2427,7 +2431,7 @@ MonoBehaviour:
   rightPole: {fileID: 711645111}
   guns:
   - gunData: {fileID: 11400000, guid: e7e1f2941a548ef4dae180ca090efffb, type: 2}
-    gun: {fileID: 1477605406}
+    gun: {fileID: 186555411}
     leftTargetPosition: {x: 2, y: 48, z: 5.5}
     leftTargetRotation: {x: 0.76627624, y: 0.026959717, z: 0.33815503, w: -0.54566026}
     leftpolePosition: {x: -0.476, y: -0.401, z: 1.023}
@@ -2720,7 +2724,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548989903}
-  m_LocalRotation: {x: -0.06750244, y: 0.1857188, z: 0.492461, w: 0.84760493}
+  m_LocalRotation: {x: -0.070104696, y: 0.19165501, z: 0.4999293, w: 0.8416795}
   m_LocalPosition: {x: -0.3033992, y: -0.0000000016464506, z: -0.000000112099166}
   m_LocalScale: {x: 0.9999998, y: 1.0000001, z: 1.0000002}
   m_ConstrainProportionsScale: 0
@@ -3040,7 +3044,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787778465}
-  m_LocalRotation: {x: 0.23810779, y: -0.32085374, z: 0.2923728, w: 0.8688359}
+  m_LocalRotation: {x: 0.28405696, y: -0.3408868, z: 0.11289344, w: 0.88902366}
   m_LocalPosition: {x: -0.1999962, y: -0.006999515, z: -0.03097537}
   m_LocalScale: {x: 1.0000002, y: 0.9999998, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3119,7 +3123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 02be767a5d698a3419b03ba063a8f23e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02be767a5d698a3419b03ba063a8f23e, type: 3}
@@ -3484,8 +3488,8 @@ MonoBehaviour:
   orientation: {fileID: 8608950383000014323}
   moveSpeed: 6
   airMultiplier: 0.4
-  walkSpeed: 4
-  sprintSpeed: 6
+  walkSpeed: 3
+  sprintSpeed: 5
   acceleration: 50
   jumpForce: 14
   jumpKey: 32

@@ -44,7 +44,7 @@ public class SwitchGun : MonoBehaviour
 
     public int currentGun = 0;
 
-    private void Start()
+    private void Update()
     {
         gunScript.data = guns[currentGun].gunData;
 

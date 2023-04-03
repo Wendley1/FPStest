@@ -51,6 +51,7 @@ public class GunData : ScriptableObject
     [SerializeField] private float snappines;
 
     [Header("Weapon Bob")]
+    public float yWalkOffSet;
     public Vector3 restPosition;
     public float transitionSpeed = 3;
     public float n_bobSpeed = 6.3f, s_bobSpeed = 9;
