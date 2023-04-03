@@ -1929,10 +1929,10 @@ MonoBehaviour:
   fingerBonesPerHand: 3
   CloseValue: 0.2
   reverse: 1
-  moveAllFingers: 1
+  moveAllFingers: 0
   moveSepFingers: 0
   moveSingleFingers: 1
-  canFingerMove: 
+  canFingerMove: 000000000100000002000000030000000400000005000000
   fingers:
     allFingers:
     - fingers:
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   moveAllFingers: 0
   moveSepFingers: 0
   moveSingleFingers: 1
-  canFingerMove: 
+  canFingerMove: 000000000100000002000000
   fingers:
     allFingers:
     - fingers:
@@ -2296,15 +2296,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d44052548134dd419d19eb84c926cea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01330021
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d44052548134dd419d19eb84c926cea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.10400012
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d44052548134dd419d19eb84c926cea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.071700275
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d44052548134dd419d19eb84c926cea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2472,14 +2472,74 @@ MonoBehaviour:
         yRotateValue: 18
         xRotateValue: 0
         move: 1
-      sepFingers: []
+      sepFingers:
+      - finger: {fileID: 333222779}
+        xValue: 54
+        yValue: -104
+        zValue: -81
+      - finger: {fileID: 394781784}
+        xValue: 0
+        yValue: 0
+        zValue: 8
+      - finger: {fileID: 856372485}
+        xValue: 0
+        yValue: 0
+        zValue: 9
+      - finger: {fileID: 919923761}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 530917862}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1988547779}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 367523137}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1726604864}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1325717983}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1101264623}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1764623041}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 65516718}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 290347424}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 141521489}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 907279076}
+        xValue: 0
+        yValue: 0
+        zValue: 0
     rightHandFingerConfig:
       allFingers:
       - fingers:
         - {fileID: 414556940}
         - {fileID: 724861573}
         - {fileID: 471747306}
-        closeValue: 0.2
+        closeValue: 0
         yRotateValue: 8
         xRotateValue: 0
         move: 0
@@ -2487,29 +2547,287 @@ MonoBehaviour:
         - {fileID: 1066990323}
         - {fileID: 1010957936}
         - {fileID: 1395426857}
-        closeValue: 0.2
-        yRotateValue: 10
-        xRotateValue: 0
-        move: 0
+        closeValue: 0.832
+        yRotateValue: 31
+        xRotateValue: 6
+        move: 1
       - fingers:
         - {fileID: 898297563}
         - {fileID: 457509519}
         - {fileID: 931900977}
-        closeValue: 0.2
-        yRotateValue: 18
+        closeValue: 0.883
+        yRotateValue: 29
         xRotateValue: 0
-        move: 0
+        move: 1
       - fingers:
         - {fileID: 825381611}
         - {fileID: 43006285}
         - {fileID: 1744887891}
-        closeValue: 0.2
-        yRotateValue: 0
+        closeValue: 0.898
+        yRotateValue: 35
+        xRotateValue: 0
+        move: 1
+      sepFingers:
+      - finger: {fileID: 984416119}
+        xValue: 153
+        yValue: 19
+        zValue: 50
+      - finger: {fileID: 751846955}
+        xValue: 0
+        yValue: 0
+        zValue: -24
+      - finger: {fileID: 430356624}
+        xValue: 17
+        yValue: 0
+        zValue: -57
+      - finger: {fileID: 414556940}
+        xValue: 0
+        yValue: 11
+        zValue: 7
+      - finger: {fileID: 724861573}
+        xValue: -11
+        yValue: 0
+        zValue: -99
+      - finger: {fileID: 471747306}
+        xValue: 0
+        yValue: 0
+        zValue: 5
+      - finger: {fileID: 1066990323}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1010957936}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1395426857}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 898297563}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 457509519}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 931900977}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 825381611}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 43006285}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1744887891}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+  - gunData: {fileID: 11400000, guid: 361f82749e5274c4d9f1fa6888a3232b, type: 2}
+    gun: {fileID: 1996378580}
+    leftTargetPosition: {x: 2, y: 44, z: 9.92}
+    leftTargetRotation: {x: 0.76627624, y: 0.026959717, z: 0.33815503, w: -0.54566026}
+    leftpolePosition: {x: -0.476, y: -0.401, z: 1.023}
+    rightTargetPosition: {x: -5, y: 13.83, z: 4.6}
+    rightTargetRotation: {x: 0.049950242, y: -0.1205906, z: -0.91597563, w: -0.37940937}
+    rightPolePosition: {x: 0.525, y: 0.43, z: 1.291}
+    leftHandFingerConfig:
+      allFingers:
+      - fingers:
+        - {fileID: 919923761}
+        - {fileID: 530917862}
+        - {fileID: 1988547779}
+        closeValue: 0.254
+        yRotateValue: 8
+        xRotateValue: 0
+        move: 1
+      - fingers:
+        - {fileID: 367523137}
+        - {fileID: 1726604864}
+        - {fileID: 1325717983}
+        closeValue: 0.514
+        yRotateValue: 10
+        xRotateValue: 0
+        move: 1
+      - fingers:
+        - {fileID: 1101264623}
+        - {fileID: 1764623041}
+        - {fileID: 65516718}
+        closeValue: 0.57
+        yRotateValue: 10
+        xRotateValue: 0
+        move: 1
+      - fingers:
+        - {fileID: 290347424}
+        - {fileID: 141521489}
+        - {fileID: 907279076}
+        closeValue: 0.63
+        yRotateValue: 18
+        xRotateValue: 0
+        move: 1
+      sepFingers:
+      - finger: {fileID: 333222779}
+        xValue: 54
+        yValue: -110
+        zValue: -81
+      - finger: {fileID: 394781784}
+        xValue: 0
+        yValue: 0
+        zValue: 8
+      - finger: {fileID: 856372485}
+        xValue: 0
+        yValue: 0
+        zValue: 9
+      - finger: {fileID: 919923761}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 530917862}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1988547779}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 367523137}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1726604864}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1325717983}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1101264623}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1764623041}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 65516718}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 290347424}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 141521489}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 907279076}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+    rightHandFingerConfig:
+      allFingers:
+      - fingers:
+        - {fileID: 414556940}
+        - {fileID: 724861573}
+        - {fileID: 471747306}
+        closeValue: 0
+        yRotateValue: 8
         xRotateValue: 0
         move: 0
-      sepFingers: []
+      - fingers:
+        - {fileID: 1066990323}
+        - {fileID: 1010957936}
+        - {fileID: 1395426857}
+        closeValue: 0.832
+        yRotateValue: 31
+        xRotateValue: 6
+        move: 1
+      - fingers:
+        - {fileID: 898297563}
+        - {fileID: 457509519}
+        - {fileID: 931900977}
+        closeValue: 0.883
+        yRotateValue: 29
+        xRotateValue: 0
+        move: 1
+      - fingers:
+        - {fileID: 825381611}
+        - {fileID: 43006285}
+        - {fileID: 1744887891}
+        closeValue: 0.898
+        yRotateValue: 35
+        xRotateValue: 0
+        move: 1
+      sepFingers:
+      - finger: {fileID: 984416119}
+        xValue: 153
+        yValue: 19
+        zValue: 50
+      - finger: {fileID: 751846955}
+        xValue: 0
+        yValue: 0
+        zValue: -24
+      - finger: {fileID: 430356624}
+        xValue: 17
+        yValue: 0
+        zValue: -57
+      - finger: {fileID: 414556940}
+        xValue: 0
+        yValue: 11
+        zValue: 7
+      - finger: {fileID: 724861573}
+        xValue: -11
+        yValue: 0
+        zValue: -99
+      - finger: {fileID: 471747306}
+        xValue: 0
+        yValue: 0
+        zValue: 5
+      - finger: {fileID: 1066990323}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1010957936}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1395426857}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 898297563}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 457509519}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 931900977}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 825381611}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 43006285}
+        xValue: 0
+        yValue: 0
+        zValue: 0
+      - finger: {fileID: 1744887891}
+        xValue: 0
+        yValue: 0
+        zValue: 0
   gunScript: {fileID: 1213050839}
-  currentGun: 0
+  currentGun: 1
 --- !u!1 &1325717982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,6 +3481,11 @@ Transform:
   m_Father: {fileID: 530917862}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1996378580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02be767a5d698a3419b03ba063a8f23e, type: 3}
+  m_PrefabInstance: {fileID: 1897124686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2009406583
 PrefabInstance:
   m_ObjectHideFlags: 0
