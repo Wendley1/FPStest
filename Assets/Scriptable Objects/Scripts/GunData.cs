@@ -11,7 +11,7 @@ public class GunData : ScriptableObject
 
     public int ammo;
     public int CurrentAmmo { get; set; }
-
+    [Space(8)]
     public float maxDistance;
     public float damage;
 
@@ -24,11 +24,10 @@ public class GunData : ScriptableObject
     [Header("Shooting")]
 
     public float fireRate;
-
     public float backForce = 0.1f;
     [Space(6)]
     public float smoothSpeed = 1f;
-
+    [Space(8)]
     public float rotationX;
     public float rotationY;
     public float rotationZ;
@@ -36,6 +35,7 @@ public class GunData : ScriptableObject
     [Header("Aim")]
 
     public float aimVelocity;
+    [Space(8)]
     public Vector3 aimPosition;
 
     [Header("Recoil")]
@@ -52,17 +52,20 @@ public class GunData : ScriptableObject
 
     [Header("Weapon Bob")]
     public float yWalkOffSet;
+    [Space(8)]
     public Vector3 restPosition;
+    [Space(8)]
     public float transitionSpeed = 3;
     public float n_bobSpeed = 6.3f, s_bobSpeed = 9;
     public float n_bobAmount = 0.015f, s_bobAmount = 0.05f;
 
     [Header("Weapon Sprint")]
     public float sprintDamp;
+    [Space(8)]
     public Vector3 normalRot;
     public Vector3 sprintPos;
     public Vector3 sprintRot;
-
+    [Space(8)]
     public float r_amount = 25f;
     public float r_maxAmount = 45f;
     public float r_smooth = 60;

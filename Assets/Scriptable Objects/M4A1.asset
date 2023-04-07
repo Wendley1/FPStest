@@ -25,7 +25,7 @@ MonoBehaviour:
   rotationY: 1.2
   rotationZ: 1.2
   aimVelocity: 8
-  aimPosition: {x: 0.001, y: -0.097, z: 0.31}
+  aimPosition: {x: 0.001, y: -0.097, z: 0.4}
   recoilX: -5
   recoilY: 4
   recoilZ: 0

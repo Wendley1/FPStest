@@ -8,7 +8,7 @@ public class SwitchGun : MonoBehaviour
     public class GunSettings
     {
         public GunData gunData;
-        public GameObject gun;
+        public Transform gun;
 
         [Header("Targets and poles")]
 
@@ -27,8 +27,15 @@ public class SwitchGun : MonoBehaviour
 
         public Finger leftHandFingerConfig;
         public Finger rightHandFingerConfig;
+
+        public void GunActive(bool value) 
+        {
+            gun.gameObject.SetActive(value);
+        }
     }
 
+    [SerializeField] private Transform targetsTransform;
+    [Space(5)]
     [SerializeField] private Hand leftHand;
     [SerializeField] private Hand rightHand;
     [Space(10)]
@@ -42,21 +49,61 @@ public class SwitchGun : MonoBehaviour
     [Space(5)]
     [SerializeField] private Gun gunScript;
 
-    public int currentGun = 0;
+    public int selectedWeapon = 0;
+
+    bool a;
+
+    private void Start()
+    {
+        SelectedWeapon();
+    }
 
     private void Update()
     {
-        gunScript.data = guns[currentGun].gunData;
+        int previusSelectedWeapon = selectedWeapon;
 
-        guns[currentGun].gun.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.Q)) 
+        {
+            a = !a;
 
-        leftTarget.SetLocalPositionAndRotation(guns[currentGun].leftTargetPosition, guns[currentGun].leftTargetRotation);
-        leftPole.localPosition = guns[currentGun].leftpolePosition;
+            selectedWeapon = a ? 0 : 1;
+        }
 
-        rightTarget.SetLocalPositionAndRotation(guns[currentGun].rightTargetPosition, guns[currentGun].rightTargetRotation);
-        rightPole.localPosition = guns[currentGun].rightPolePosition;
+        rightTarget.SetLocalPositionAndRotation(guns[selectedWeapon].rightTargetPosition, guns[selectedWeapon].rightTargetRotation);
+        rightPole.localPosition = guns[selectedWeapon].rightPolePosition;
 
-        leftHand.SetFinger(guns[currentGun].leftHandFingerConfig);
-        rightHand.SetFinger(guns[currentGun].rightHandFingerConfig);
+        if (previusSelectedWeapon != selectedWeapon) 
+        {
+            SelectedWeapon();
+        }
+    }
+
+    private void SelectedWeapon() 
+    {
+        int i = 0;
+
+        foreach(GunSettings s in guns) 
+        {
+            if (i == selectedWeapon)
+                s.GunActive(true);
+            else
+                s.GunActive(false);
+
+            i++;
+        }
+
+        gunScript.data = guns[selectedWeapon].gunData;
+
+        leftTarget.SetLocalPositionAndRotation(guns[selectedWeapon].leftTargetPosition, guns[selectedWeapon].leftTargetRotation);
+        leftPole.localPosition = guns[selectedWeapon].leftpolePosition;
+
+        rightTarget.SetLocalPositionAndRotation(guns[selectedWeapon].rightTargetPosition, guns[selectedWeapon].rightTargetRotation);
+        rightPole.localPosition = guns[selectedWeapon].rightPolePosition;
+
+        leftHand.SetFinger(guns[selectedWeapon].leftHandFingerConfig);
+        rightHand.SetFinger(guns[selectedWeapon].rightHandFingerConfig);
+
+        targetsTransform.SetParent(guns[selectedWeapon].gun, true);
+
     }
 }

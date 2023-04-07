@@ -119,6 +119,6 @@ public class Hand : MonoBehaviour
 
     public void SetFinger(Finger finger) 
     {
-        this.fingers = finger;
+        fingers = finger;
     }
 }

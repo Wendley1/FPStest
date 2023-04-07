@@ -33,7 +33,8 @@ public class Gun : MonoBehaviour
     private float bobSpeed;
     private float bobAmount;
 
-    private bool aim;
+    public bool IsAiming { get; private set; }
+
     private float timeToFire = 0f;
     private Vector3 normalPos;
 
@@ -120,7 +121,7 @@ public class Gun : MonoBehaviour
 
     private void WeaponSway()
     {
-        data.SwayController(aim);
+        data.SwayController(IsAiming);
 
         float mouseX = Input.GetAxisRaw("Mouse X") * data.Sway;
         float mouseY = Input.GetAxisRaw("Mouse Y") * data.Sway;
@@ -140,20 +141,20 @@ public class Gun : MonoBehaviour
             timeToFire = Time.time + (1f / data.fireRate);
 
             arms.localPosition -= Vector3.forward * data.backForce;
-            Quaternion targetRotation = arms.localRotation *= Quaternion.Euler(data.rotationX, Random.Range(-data.rotationY, data.rotationY), Random.Range(-data.rotationZ, data.rotationZ));
-            arms.localRotation = Quaternion.Slerp(arms.localRotation, targetRotation, data.smoothSpeed * Time.deltaTime);
+            Quaternion randomRotation = arms.localRotation *= Quaternion.Euler(data.rotationX, Random.Range(-data.rotationY, data.rotationY), Random.Range(-data.rotationZ, data.rotationZ));
+            arms.localRotation = Quaternion.Slerp(arms.localRotation, randomRotation, data.smoothSpeed * Time.deltaTime);
 
             data.CurrentAmmo--;
-            data.Recoil(aim);
+            data.Recoil(IsAiming);
 
             Physics.Raycast(playerCam.position, playerCam.forward, out RaycastHit hit, data.maxDistance);
-
             Instantiate(sphere, hit.point, Quaternion.identity, null);
         }
     }
+
     private void Inputs()
     {
-        aim = Input.GetMouseButton(1);
+        IsAiming = Input.GetMouseButton(1);
 
         if (Input.GetKeyDown(KeyCode.R))
             data.Reload();
@@ -163,7 +164,7 @@ public class Gun : MonoBehaviour
     {
         Vector3 target = normalPosition;
 
-        if (aim && !player.Sprinting)
+        if (IsAiming && !player.Sprinting)
             target = data.aimPosition;
 
         Vector3 desiredPosition = Vector3.Lerp(arms.localPosition, target, Time.deltaTime * data.aimVelocity);

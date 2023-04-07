@@ -23,7 +23,19 @@ public class PlayerMovement : MonoBehaviour
     public bool Sprinting { get; private set; }
 
     [Header("Jumping")]
-    public float jumpForce = 5f;
+    [SerializeField] private float jumpForce = 5f;
+    [Space(5)]
+    [SerializeField] private Transform arms;
+    [Space(5)]
+    [SerializeField] private float armsLandingSmooth;
+    [SerializeField] private float armsJumpingSmooth;
+    [Space(5)]
+    [SerializeField] private float normalY;
+    [SerializeField] private float maxYDown;
+    [SerializeField] private float maxYUp;
+
+    private float y;
+    private float armsSmooth;
 
     [Header("Keybinds")]
     [SerializeField] KeyCode jumpKey = KeyCode.Space;
@@ -39,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Detection")]
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
-    [SerializeField] float groundDistance = 0.2f;
+    [SerializeField] float groundDistance = 0.15f;
 
     public bool IsGrounded { get; private set; }
 
@@ -66,12 +78,12 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+    float t = 0;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
-
     private void Update()
     {
         IsGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -83,7 +95,35 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(jumpKey) && IsGrounded)
         {
             Jump();
+            t = 0.2f;
         }
+        else if (!IsGrounded)
+        {
+            y += Time.deltaTime * 0.15f;
+
+            if(y > maxYUp)
+                y = maxYUp;
+
+            armsSmooth = armsJumpingSmooth;
+        }
+        else 
+        {
+            if(t < 0) 
+            {
+                y = normalY;
+                armsSmooth = armsLandingSmooth;
+            }
+            else
+            {
+                y = maxYDown;
+                armsSmooth = armsJumpingSmooth * 2;
+                t -= Time.deltaTime;
+            }
+        }
+
+        Vector3 mov = new(0, y, 0);
+
+        arms.localPosition = Vector3.Lerp(arms.localPosition, mov, Time.deltaTime * armsSmooth);
 
         slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
     }
