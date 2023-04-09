@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: MP5
   ammo: 30
-  maxDistance: 10
-  damage: 0
+  maxDistance: Infinity
+  damage: 23
   aimSway: 7
   normalSway: 12
   fireRate: 12
@@ -24,6 +24,7 @@ MonoBehaviour:
   rotationX: -1.5
   rotationY: 0.5
   rotationZ: 5
+  aimfov: 50
   aimVelocity: 15
   aimPosition: {x: 0.01, y: -0.056, z: 0.4}
   recoilX: -3

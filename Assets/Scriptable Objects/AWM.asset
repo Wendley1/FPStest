@@ -13,19 +13,38 @@ MonoBehaviour:
   m_Name: AWM
   m_EditorClassIdentifier: 
   name: 
-  ammo: 0
-  maxDistance: 0
-  damage: 0
-  fireRate: 0
-  backForce: 0.1
+  ammo: 10
+  maxDistance: Infinity
+  damage: 120
+  aimSway: 5
+  normalSway: 8
+  fireRate: 1
+  backForce: 0.04
   smoothSpeed: 1
-  rotationX: 0
+  rotationX: -2
   rotationY: 0
-  rotationZ: 0
-  recoilX: 0
-  recoilY: 0
+  rotationZ: 2
+  aimfov: 40
+  aimVelocity: 7
+  aimPosition: {x: 0.01, y: -0.11, z: 0.28}
+  recoilX: -12
+  recoilY: 12
   recoilZ: 0
-  aimRecoilX: 0
-  aimRecoilY: 0
+  aimRecoilX: -4
+  aimRecoilY: 4
   aimRecoilZ: 0
-  snappines: 0
+  snappines: 8
+  yWalkOffSet: 0
+  restPosition: {x: 0, y: 0, z: 0}
+  transitionSpeed: 6
+  n_bobSpeed: 7.5
+  s_bobSpeed: 11
+  n_bobAmount: 0.015
+  s_bobAmount: 0.05
+  sprintDamp: 8
+  normalRot: {x: 0, y: 0, z: 0}
+  sprintPos: {x: -0.21, y: -0.095, z: -0.09}
+  sprintRot: {x: 13.39, y: -44.2, z: 24}
+  r_amount: 25
+  r_maxAmount: 45
+  r_smooth: 60

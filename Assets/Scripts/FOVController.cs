@@ -12,10 +12,10 @@ public class FOVController : MonoBehaviour
     [Space(5)]
     [SerializeField] private float normalFov;
     [SerializeField] private float sprintFov;
-    [SerializeField] private float aimFov;
+    public float AimFov { private get; set; } = 50f;
 
-    private float fov;
-    
+    private float fov = 0;
+
     private void Start()
     {
         if (cam == null)
@@ -30,7 +30,7 @@ public class FOVController : MonoBehaviour
         }
         else if (gun.IsAiming) 
         {
-            fov = aimFov;
+            fov = AimFov;
         }
         else 
         {

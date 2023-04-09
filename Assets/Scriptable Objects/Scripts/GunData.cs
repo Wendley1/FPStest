@@ -34,6 +34,8 @@ public class GunData : ScriptableObject
 
     [Header("Aim")]
 
+    public float aimfov = 50f;
+    [Space(8)]
     public float aimVelocity;
     [Space(8)]
     public Vector3 aimPosition;

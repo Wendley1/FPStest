@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: M4A1
   ammo: 30
-  maxDistance: 10
-  damage: 0
+  maxDistance: Infinity
+  damage: 34
   aimSway: 5
   normalSway: 10
   fireRate: 10
@@ -24,6 +24,7 @@ MonoBehaviour:
   rotationX: -0.8
   rotationY: 1.2
   rotationZ: 1.2
+  aimfov: 45
   aimVelocity: 8
   aimPosition: {x: 0.001, y: -0.097, z: 0.4}
   recoilX: -5

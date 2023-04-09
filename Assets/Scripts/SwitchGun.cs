@@ -64,13 +64,20 @@ public class SwitchGun : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q)) 
         {
-            a = !a;
-
-            selectedWeapon = a ? 0 : 1;
+            if (selectedWeapon >= guns.Length - 1)
+                selectedWeapon = 0;
+            else
+                selectedWeapon++;
         }
+
+        leftTarget.SetLocalPositionAndRotation(guns[selectedWeapon].leftTargetPosition, guns[selectedWeapon].leftTargetRotation);
+        leftPole.localPosition = guns[selectedWeapon].leftpolePosition;
 
         rightTarget.SetLocalPositionAndRotation(guns[selectedWeapon].rightTargetPosition, guns[selectedWeapon].rightTargetRotation);
         rightPole.localPosition = guns[selectedWeapon].rightPolePosition;
+
+        leftHand.SetFinger(guns[selectedWeapon].leftHandFingerConfig);
+        rightHand.SetFinger(guns[selectedWeapon].rightHandFingerConfig);
 
         if (previusSelectedWeapon != selectedWeapon) 
         {
