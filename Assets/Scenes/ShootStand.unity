@@ -150,8 +150,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54097739}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.5565, y: 1.7611, z: -32.64}
-  m_LocalScale: {x: 0.9347008, y: 1.3373184, z: 0.19787}
+  m_LocalPosition: {x: 19.5565, y: 1.7639, z: -32.64}
+  m_LocalScale: {x: 0.9347008, y: 1.2589229, z: 0.19787}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 413498053}
@@ -3337,7 +3337,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   maxSpeed: 14
-  velocityHitMultiplier: 1.4
+  velocityHitMultiplier: 1
   timeToUp: 5
   targeMove: {fileID: 437384438}
   leftPoint: {fileID: 1559546173}
@@ -5147,7 +5147,7 @@ MonoBehaviour:
   health: 100
   speed: 6
   maxSpeed: 14
-  velocityHitMultiplier: 1.6
+  velocityHitMultiplier: 1
   timeToUp: 5
   targeMove: {fileID: 557506908}
   leftPoint: {fileID: 1518597007}
@@ -5548,7 +5548,7 @@ MonoBehaviour:
   health: 100
   speed: 2
   maxSpeed: 14
-  velocityHitMultiplier: 1.2
+  velocityHitMultiplier: 1
   timeToUp: 5
   targeMove: {fileID: 1806998460}
   leftPoint: {fileID: 1596396258}

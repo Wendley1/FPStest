@@ -33,7 +33,8 @@ public class SwitchGun : MonoBehaviour
             gun.gameObject.SetActive(value);
         }
     }
-
+    [SerializeField] private bool animating;
+    [Space(10)]
     [SerializeField] private Transform targetsTransform;
     [Space(5)]
     [SerializeField] private Hand leftHand;
@@ -49,9 +50,7 @@ public class SwitchGun : MonoBehaviour
     [Space(5)]
     [SerializeField] private Gun gunScript;
 
-    public int selectedWeapon = 0;
-
-    bool a;
+    [SerializeField] private int selectedWeapon = 0;
 
     private void Start()
     {
@@ -70,14 +69,17 @@ public class SwitchGun : MonoBehaviour
                 selectedWeapon++;
         }
 
-        leftTarget.SetLocalPositionAndRotation(guns[selectedWeapon].leftTargetPosition, guns[selectedWeapon].leftTargetRotation);
-        leftPole.localPosition = guns[selectedWeapon].leftpolePosition;
+        if (animating) 
+        {
+            leftTarget.SetLocalPositionAndRotation(guns[selectedWeapon].leftTargetPosition, guns[selectedWeapon].leftTargetRotation);
+            leftPole.localPosition = guns[selectedWeapon].leftpolePosition;
 
-        rightTarget.SetLocalPositionAndRotation(guns[selectedWeapon].rightTargetPosition, guns[selectedWeapon].rightTargetRotation);
-        rightPole.localPosition = guns[selectedWeapon].rightPolePosition;
+            rightTarget.SetLocalPositionAndRotation(guns[selectedWeapon].rightTargetPosition, guns[selectedWeapon].rightTargetRotation);
+            rightPole.localPosition = guns[selectedWeapon].rightPolePosition;
 
-        leftHand.SetFinger(guns[selectedWeapon].leftHandFingerConfig);
-        rightHand.SetFinger(guns[selectedWeapon].rightHandFingerConfig);
+            leftHand.SetFinger(guns[selectedWeapon].leftHandFingerConfig);
+            rightHand.SetFinger(guns[selectedWeapon].rightHandFingerConfig);
+        }
 
         if (previusSelectedWeapon != selectedWeapon) 
         {

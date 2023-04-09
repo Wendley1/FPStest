@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8c4897fca541f47b7b15afd5c12751, type: 3}
+  m_Name: Colt
+  m_EditorClassIdentifier: 
+  name: Colt
+  ammo: 6
+  maxDistance: Infinity
+  damage: 25
+  aimSway: 3
+  normalSway: 5
+  fireRate: 7
+  backForce: 0.075
+  smoothSpeed: 10
+  rotationX: -12.5
+  rotationY: 2.5
+  rotationZ: 2.5
+  aimfov: 55
+  aimVelocity: 10
+  aimPosition: {x: -0.005, y: -0.06, z: 0.37}
+  recoilX: -10
+  recoilY: 5
+  recoilZ: 0
+  aimRecoilX: -5
+  aimRecoilY: 2.5
+  aimRecoilZ: 0
+  snappines: 5
+  yWalkOffSet: -0.025
+  restPosition: {x: 0, y: 0, z: 0}
+  transitionSpeed: 6
+  n_bobSpeed: 8
+  s_bobSpeed: 11
+  n_bobAmount: 0.03
+  s_bobAmount: 0.05
+  sprintDamp: 8
+  normalRot: {x: 0, y: 0, z: 0}
+  sprintPos: {x: -0.12, y: -0.1, z: -0.06}
+  sprintRot: {x: 17.71, y: -13.35, z: 23.7}
+  r_amount: 45
+  r_maxAmount: 50
+  r_smooth: 60

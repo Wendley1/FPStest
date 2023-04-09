@@ -34,7 +34,7 @@ MonoBehaviour:
   aimRecoilY: 4
   aimRecoilZ: 0
   snappines: 8
-  yWalkOffSet: 0
+  yWalkOffSet: -0.0095
   restPosition: {x: 0, y: 0, z: 0}
   transitionSpeed: 6
   n_bobSpeed: 7.5
